@@ -3,6 +3,9 @@
 
 	let time = new Date();
 
+	export let height = 100
+	export let width = 100
+
 	// these automatically update when `time`
 	// changes, because of the `$:` prefix
 	$: hours = time.getHours();
@@ -20,7 +23,7 @@
 	});
 </script>
 
-<svg viewBox='-50 -50 100 100'>
+<svg width="{width}" height="{height}" viewBox='-50 -50 100 100'>
 	<circle class='clock-face' r='48'/>
 
 	<!-- markers -->
